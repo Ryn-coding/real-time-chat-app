@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 // import 'emoji-mart/css/emoji-mart.css';
 import CustomEmojiPicker from "../components/EmojiPicker";
 
-const socket = io("http://localhost:5000");
+const socket = io("http://10.204.80.237:10000");
 
 function Chat() {
     const { user, token, logout } = useAuth();
@@ -146,7 +146,7 @@ function Chat() {
             setLoading(true);
             setError("");
             try {
-                const res = await axios.get(`http://localhost:5000/api/messages/${receiverId}`, {
+                const res = await axios.get(`http://10.204.80.237:10000/api/messages/${receiverId}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setChat(res.data.map(msg => ({
@@ -172,7 +172,7 @@ function Chat() {
         const fetchUsers = async () => {
             setLoading(true);
             try {
-                const res = await axios.get("http://localhost:5000/api/users", {
+                const res = await axios.get("http://10.204.80.237:10000/api/users", {
                     headers: { Authorization: `Bearer ${token}` }
                 });
                 setUsers(res.data.filter(u => u._id !== user._id));
@@ -273,7 +273,7 @@ function Chat() {
         formData.append('file', file);
 
         try {
-            const res = await axios.post('http://localhost:5000/api/upload', formData, {
+            const res = await axios.post('http://10.204.80.237:10000/api/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data', Authorization: `Bearer ${token}` },
             });
             // Store file info temporarily, wait for send button
@@ -291,7 +291,7 @@ function Chat() {
 
         try {
             const res = await axios.put(
-                `http://localhost:5000/api/messages/${id}`,
+                `http://10.204.80.237:10000/api/messages/${id}`,
                 { content: message },
                 {
                     headers: { Authorization: `Bearer ${token}` },
@@ -314,7 +314,7 @@ function Chat() {
     };
     const handleDeleteMessage = async (id) => {
         try {
-            await axios.delete(`http://localhost:5000/api/messages/${id}`, {
+            await axios.delete(`http://10.204.80.237:10000/api/messages/${id}`, {
                 headers: { Authorization: `Bearer ${token}` },
             });
 
