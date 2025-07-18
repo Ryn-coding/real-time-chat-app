@@ -1,0 +1,30 @@
+<svg width="200" height="200" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Option 1: Modern Minimalist Design (Enhanced) -->
+  <!-- Main Background Shape (soft rounded rectangle) -->
+  <rect x="10" y="10" width="80" height="80" rx="20" ry="20" fill="url(#paint0_linear_logo_alt_enhanced)"/>
+  <defs>
+    <linearGradient id="paint0_linear_logo_alt_enhanced" x1="50" y1="10" x2="50" y2="90" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#5A67D8"/>
+      <stop offset="1" stop-color="#4338CA"/>
+    </linearGradient>
+  </defs>
+
+  <!-- First Chat Bubble (larger, behind) -->
+  <path d="M30 35H70C72.7614 35 75 37.2386 75 40V60C75 62.7614 72.7614 65 70 65H45L35 75V40C35 37.2386 32.7614 35 30 35Z" fill="#A7B3F7" filter="url(#shadow1)"/>
+
+  <!-- Second Chat Bubble (smaller, in front) -->
+  <path d="M40 30H80C82.7614 30 85 32.2386 85 35V55C85 57.7614 82.7614 60 80 60H55L45 70V35C45 32.2386 42.7614 30 40 30Z" fill="#FFFFFF" filter="url(#shadow2)"/>
+
+  <!-- Simple Message Icon (three dots) -->
+  <circle cx="55" cy="45" r="3" fill="#4338CA"/>
+  <circle cx="65" cy="45" r="3" fill="#4338CA"/>
+  <circle cx="75" cy="45" r="3" fill="#4338CA"/>
+
+  <!-- Filters for shadows -->
+  <filter id="shadow1" x="0" y="0" width="100" height="100">
+    <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.2"/>
+  </filter>
+  <filter id="shadow2" x="0" y="0" width="100" height="100">
+    <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.25"/>
+  </filter>
+</svg>
